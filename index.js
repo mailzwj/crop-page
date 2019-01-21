@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const Koa = require('koa');
 const Router = require('koa-router');
+const Static = require('koa-static');
 const puppeteer = require('puppeteer');
 
 const app = new Koa();
@@ -52,9 +53,13 @@ route.get('/crop', async (ctx) => {
     fs.unlinkSync(tmpPath);
     ctx.type = 'image/png';
     ctx.body = imgData;
+}).get(['/', '/index'], (ctx) => {
+    ctx.type = 'text/html';
+    ctx.body = fs.readFileSync('./index.html').toString('utf-8');
 });
 
-app.use(route.routes())
+app.use(Static('./static'))
+    .use(route.routes())
     .use(route.allowedMethods())
     .listen('3002');
 

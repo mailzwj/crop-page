@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font: 14px/1.5 'PingFang SC', 'Microsoft Yahei', sans-serif;
+    color: #333;
+}
+
+.container {
+    padding: 100px 0 0;
+    text-align: center;
+}
+
+.container .cut-btn {
+    display: inline-block;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 32px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
+
+.container .cut-btn:hover {
+    background-color: #f8f8f8;
+}
+
+.container .code-main {
+    margin-top: 50px;
+}
+
+.container .code-info .step {
+    display: inline-block;
+    position: relative;
+    padding: 10px 0 15px;
+}
+
+.container .code-info .step:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    transform: translate(-50%, 0);
+    border-top: 5px solid #999;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left: 5px solid transparent;
+}
+
+.container .code-info .step:last-child:after {
+    content: none;
+}
+
+.container .fav-code {
+    padding: 5px;
+    width: 640px;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    resize: none;
+    background-color: #f8f8f8;
+}
