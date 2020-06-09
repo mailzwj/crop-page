@@ -7,7 +7,7 @@
 ### 示例代码
 
 ```
-http://39.96.76.88:3002/crop?src=https%3A%2F%2Fjd.com&renderWidth=1000&width=1000
+http://49.233.2.233:3002/crop?src=https%3A%2F%2Fjd.com&renderWidth=1000&width=1000
 ```
 
 ### 完整参数说明
